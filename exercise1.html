@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <title>EECS 448 Lab 5 Exercise 1</title>
+    </head>
+
+    <body>
+        <h1>Password Validator</h1>
+        <div class="container">
+                Password:
+                <input type="password" id="psw1">
+                <br>
+                Confirm Password:
+                <input type="password" id="psw2">
+                <br>
+                <button onclick="validate()">Validate</button>
+        </div>
+
+        <script>
+            
+
+            function validate() {
+                let pass1 = document.getElementById("psw1");
+                let pass2 = document.getElementById("psw2");
+
+                if (pass1.value.length < 8) {
+                    alert("Password in the first field is less than 8 characters!");
+                } else if (pass2.value.length < 8) {
+                    alert("Password in the second filed is less than 8 characters!");
+                } else if (pass1.value != pass2.value) {
+                    alert("Passwords must match!");
+                } else {
+                    alert("Passwords valid!");
+                }
+            }
+        </script>
+    </body>

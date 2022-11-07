@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <head>
+        <title>EECS 448 Lab 5 Exercise 2</title>
+    </head>
+
+    <body>
+        <h1>EECS 448 Lab 5 Exercise 2</h1>
+        <img src="img1.jpg" height="500" width="500">
+        <button onclick="cycleForward()">Next</button>
+        <button onclick="cycleBackward()">Back</button>
+        <script>
+            let images = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
+            let index = 0
+
+            function cycleForward() {
+                let image = document.querySelector("img");
+                index++;
+                if (index > 4) index = 0;
+                image.src = images[index];
+            }
+
+            function cycleBackward() {
+                let image = document.querySelector('img');
+                index--;
+                if (index < 0) index = 4;
+                image.src = images[index];
+            }
+        </script>
+    </body>
